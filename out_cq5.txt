@@ -1,0 +1,9 @@
+step  evidence                            LR      odds  posterior
+   0  prior                                -    0.0204     0.0200
+   1  Burst of near-duplicate queries    4.0    0.0816     0.0755
+   2  Off-hours access                   1.5    0.1224     0.1091
+   3  Known-good API key                 0.4    0.0490     0.0467
+   4  Grid-like systematic probing       8.0    0.3918     0.2815
+
+Posterior never passes 0.50. Highest value is 0.2815 at step 4 (Grid-like systematic probing)
+'Known-good API key' pulls the posterior down from 0.1091 to 0.0467, a drop of 6.24 percentage points

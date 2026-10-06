@@ -1,0 +1,16 @@
+--- fpr gap (D - C) ---
+observed gap      : 0.1938
+bootstrap SD      : 0.0482
+95% percentile CI : [0.1001, 0.2879]
+z = gap / SD      : 4.023
+approx. p-value   : 5.74e-05
+
+--- selection_rate gap (D - C) ---
+observed gap      : 0.1038
+bootstrap SD      : 0.0460
+95% percentile CI : [0.0154, 0.1938]
+z = gap / SD      : 2.260
+approx. p-value   : 2.38e-02
+
+fpr             z = 4.02
+selection_rate  z = 2.26
