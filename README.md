@@ -1,1 +1,76 @@
-# CMPE-253-homework--2-code-
+CMPE-253-homework--2-code-
+
+<h1>CMPE 253 AI Threat Intelligence: Homework 2</h1>
+
+<p>
+<b>Student:</b> Kanaka Sarat Siripurapu<br>
+<b>SJSU ID:</b> 019132776<br>
+<b>Course:</b> CMPE 253, AI Threat Intelligence, San Jose State University<br>
+<b>Term:</b> Fall 2026
+</p>
+
+<h2>Overview</h2>
+
+<p>This repository contains my Python solutions to the <b>five coding questions (CQ1 to CQ5)</b> in Homework 2. The homework covers:</p>
+
+<ol>
+<li><b>Algorithmic Fairness I:</b> Bias and Discrimination</li>
+<li><b>AI Threat Intelligence II:</b> Detection, Defense and Robustness</li>
+<li><b>AI Threat Intelligence Math Deep Dive</b></li>
+</ol>
+
+<p>The ten numerical questions (NQ1 to NQ10) are answered in the submitted PDF. Several coding questions are checked against those hand calculations.</p>
+
+<h2>Repository Structure</h2>
+
+<table>
+<tr><th>File or Folder</th><th>Contents</th></tr>
+<tr><td><code>README.md</code></td><td>Project overview</td></tr>
+<tr><td><code>cq1.py</code></td><td>Fairness metrics for three groups</td></tr>
+<tr><td><code>cq2.py</code></td><td>Bootstrap significance test</td></tr>
+<tr><td><code>cq3.py</code></td><td>Equal opportunity threshold search</td></tr>
+<tr><td><code>cq4.py</code></td><td>PGD attack on a linear model</td></tr>
+<tr><td><code>cq5.py</code></td><td>Sequential Bayesian risk updating</td></tr>
+<tr><td><code>outputs/</code></td><td>Printed output from each script</td></tr>
+<tr><td><code>plots/</code></td><td>Figures saved by each script</td></tr>
+</table>
+
+<h2>Coding Questions</h2>
+
+<table>
+<tr><th>Question</th><th>Topic</th><th>Main Function</th><th>Output</th></tr>
+<tr><td><b>CQ1</b></td><td>Fairness metrics for groups P, Q and R</td><td><code>fairness_metrics(tp, fp, tn, fn)</code></td><td>Metrics table, gaps against the median group, and a grouped TPR and FPR bar chart</td></tr>
+<tr><td><b>CQ2</b></td><td>Bootstrap significance test for a metric gap</td><td><code>bootstrap_gap(counts_a, counts_b, metric, B=20000)</code></td><td>Confidence interval and p value for the FPR and selection rate gaps, plus a histogram</td></tr>
+<tr><td><b>CQ3</b></td><td>Equal opportunity threshold search by bisection</td><td><code>at_t(y, s, t)</code></td><td>Bisection trace over 10 iterations and ROC curves with matched points</td></tr>
+<tr><td><b>CQ4</b></td><td>Iterative FGSM and PGD attack</td><td><code>pgd_attack(w, b, x0, y, eps, alpha, steps)</code></td><td>Table checked against NQ8 and plots of f(x) and loss</td></tr>
+<tr><td><b>CQ5</b></td><td>Sequential Bayesian risk updating in log odds form</td><td><code>bayes_update(prior, evidence)</code></td><td>Odds and posterior table and a plot of the posterior at each step</td></tr>
+</table>
+
+<h2>Requirements</h2>
+
+<p>The assignment allows <b>only NumPy, SciPy and Matplotlib</b>.</p>
+
+<pre><code>pip install numpy scipy matplotlib</code></pre>
+
+<h2>How to Run</h2>
+
+<p>Each script runs on its own. It prints its results to the terminal and saves its plot to the <code>plots</code> folder.</p>
+
+<pre><code>python cq1.py
+python cq2.py
+python cq3.py
+python cq4.py
+python cq5.py</code></pre>
+
+<h2>Notes</h2>
+
+<ol>
+<li><b>Random seeds are fixed</b> in CQ2 and CQ3, so the results are the same on every run.</li>
+<li><b>CQ3</b> uses the <code>make_scores</code> function exactly as it appears in the assignment.</li>
+<li><b>CQ4</b> is checked against my hand calculation in <b>NQ8</b>.</li>
+<li>Tested with <b>Python 3.13.5</b>, <b>NumPy 2.1.3</b>, <b>SciPy 1.15.3</b> and <b>Matplotlib 3.10.0</b>.</li>
+</ol>
+
+<h2>Academic Integrity</h2>
+
+<p>This repository is <b>private</b> until grades are released. It is shared only with the instructor for grading.</p>
